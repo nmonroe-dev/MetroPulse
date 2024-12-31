@@ -1,0 +1,24 @@
+.ad-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px;
+    max-width: 300px;
+    margin: auto; /* Center the ad container */
+}
+
+.ad-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.ad-container p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}

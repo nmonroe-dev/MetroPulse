@@ -1,0 +1,56 @@
+/* Container Styling */
+.about-container {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+    max-width: 90%; /* Limit the width to 90% of the viewport */
+    
+    margin: 20px auto; /* Center the container horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: linear-gradient(to right, #ffffff, #e3f2fd);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Headings */
+.about-container h1 {
+    font-size: 2.5rem;
+    color: #7b828a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-container h2 {
+    font-size: 1.8rem;
+    color: #00509e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00aaff;
+    padding-bottom: 5px;
+}
+
+/* Paragraph Styling */
+.about-container p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Links */
+.about-container a {
+    color: #00509e;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.about-container a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
+
+/* Box Shadow for Hover Effect */
+.about-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

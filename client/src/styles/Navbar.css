@@ -1,0 +1,113 @@
+/* Navbar Container */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366; /* Deep navy blue */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-family: "Playfair Display", serif;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+}
+
+/* Logo Styling */
+.logo h1 {
+    color: #ffffff; /* White text for the logo */
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    flex: 1; /* Allow the logo to take space */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Space between links */
+    flex: 2; /* Allow links to grow for better spacing */
+    justify-content: flex-end;
+}
+
+/* Navigation Link Items */
+.nav-links li {
+    margin: 0;
+}
+
+/* Link Styling */
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* White text for links */
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #00aaff; /* Aqua blue hover effect */
+    color: #003366; /* Navy text on hover */
+}
+
+/* Button Styling */
+.nav-links .latest-news {
+    background-color: #00aaff; /* Aqua blue button */
+    color: #ffffff; /* White text */
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links .latest-news:hover {
+    background-color: #ffffff; /* White hover effect */
+    color: #003366; /* Navy text */
+}
+
+/* Dropdown Styling */
+.nav-links select {
+    background-color: #ffffff;
+    color: #003366; /* Navy text */
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #00aaff; /* Aqua border */
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.nav-links select:hover {
+    border-color: #ffffff; /* White border on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px; /* Space between links in column layout */
+        width: 100%;
+    }
+
+    .nav-links a,
+    .nav-links .latest-news,
+    .nav-links select {
+        width: 100%; /* Full width for buttons and links */
+        text-align: left;
+    }
+}

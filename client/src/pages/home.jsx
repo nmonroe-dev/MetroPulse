@@ -20,7 +20,7 @@ function HomePage() {
             return;
         }
         try {
-            const getNewsCat = await axios.get(`http://localhost:6006/news/category/${onCategoryChange}`);
+            const getNewsCat = await axios.get(`https://metropulse-backend.onrender.com/news/category/${onCategoryChange}`);
             setFilteredNews(getNewsCat.data);
         } catch (error) {
             console.error("Unable to pull news by category", error);
@@ -31,7 +31,7 @@ function HomePage() {
         setActiveView("latest"); 
         try {
             console.log("button clicked");
-            const latestArticles = await axios.get("http://localhost:6006/news/latest/");
+            const latestArticles = await axios.get("https://metropulse-backend.onrender.com/news/latest/");
             console.log(latestArticles);
             setLatestNews(latestArticles.data);
         } catch (error) {
@@ -42,7 +42,7 @@ function HomePage() {
     useEffect(() => {
         const onPageLoad = async () => {
             try {
-                const getNews = await axios.get("http://localhost:6006/news/articles");
+                const getNews = await axios.get("https://metropulse-backend.onrender.com/news/articles");
                 setNews(getNews.data);
                 setFilteredNews(getNews.data);
             } catch (error) {

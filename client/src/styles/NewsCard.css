@@ -1,30 +1,30 @@
-/* News Card Styles */
+
 .news-card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effects */
+
 .news-card:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
 }
 
-/* News Card Image */
+
 .news-img {
-    width: 100%;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
-    border-bottom: 2px solid #003366; /* Deep navy blue divider */
+    border-bottom: 2px solid #003366; 
 }
 
-/* Text Content */
+
 .text-content {
     padding: 15px;
     display: flex;
@@ -33,7 +33,7 @@
     color: #333;
 }
 
-/* Title */
+
 .text-content h2 {
     font-size: 1.5rem;
     font-weight: bold;
@@ -43,7 +43,7 @@
     line-height: 1.4;
 }
 
-/* Description */
+
 .text-content p {
     font-size: 1rem;
     color: #666;
@@ -55,7 +55,7 @@
     -webkit-box-orient: vertical;
 }
 
-/* Button */
+
 .news-card-button {
     margin-top: auto;
     background-color: #00aaff;
@@ -71,5 +71,43 @@
 }
 
 .news-card-button:hover {
-    background-color: #0077cc; /* Darker blue on hover */
+    background-color: #0077cc; 
+}
+@media (max-width: 768px) {
+    .news-card {
+        padding: 10px; 
+    }
+
+    .text-content h2 {
+        font-size: 1.2rem; 
+    }
+
+    .text-content p {
+        font-size: 0.9rem; 
+        line-height: 1.4; 
+    }
+
+    .news-card-button {
+        font-size: 0.8rem; 
+        padding: 8px 10px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .news-card {
+        padding: 8px; 
+    }
+
+    .text-content h2 {
+        font-size: 1rem; 
+    }
+
+    .text-content p {
+        font-size: 0.8rem; 
+    }
+
+    .news-card-button {
+        font-size: 0.7rem; 
+        padding: 6px 8px; 
+    }
 }

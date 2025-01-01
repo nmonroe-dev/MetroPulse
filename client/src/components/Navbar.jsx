@@ -1,22 +1,32 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
 function Navbar({ onCategoryChange, getLatest }) {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
     return (
         <div className="nav-container">
             <div className="logo">
-                <h1>Great News</h1>
+                <h1>The MetroPulse</h1>
             </div>
-            <ul className="nav-links">
+            <div className="hamburger" onClick={toggleMenu}>
+                <span className="line"></span>
+                <span className="line"></span>
+                <span className="line"></span>
+            </div>
+            <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
                 <li><Link to="/">Home</Link></li>
-                <li><button className="latest-news" onClick={getLatest}> Latest News</button></li>
+                <li><button className="latest-news" onClick={getLatest}>Latest News</button></li>
                 <li>
                     <select
                         id="category"
                         name="category"
-                        onChange={(e) => {
-                            onCategoryChange(e.target.value);
-                        }}
+                        onChange={(e) => onCategoryChange(e.target.value)}
                         defaultValue="All"
                     >
                         <option value="All">All Categories</option>

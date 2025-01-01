@@ -1,13 +1,14 @@
-/* General Styles */
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
-    background-color: #f9f9f9; /* Light gray for clean background */
-    color: #333; /* Dark gray text for readability */
+    background-color: #f9f9f9; 
+    color: #333; 
     line-height: 1.6;
+    scroll-behavior: smooth; 
+    overflow-x: hidden; 
 }
 
-/* Home Container */
+
 .home-container {
     display: flex;
     flex-direction: column;
@@ -16,13 +17,15 @@ body {
     margin: 0 auto;
     padding: 20px;
     box-sizing: border-box;
+    max-width: 100%; 
+    
 }
 
-/* Navbar */
+
 .nav {
     width: 100%;
-    background-color: #003366; /* Deep navy blue */
-    color: #fff; /* White text */
+    background-color: #003366; 
+    color: #fff; 
     padding: 15px 20px;
     text-align: center;
     font-size: 1.2rem;
@@ -30,91 +33,105 @@ body {
     text-transform: uppercase;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
-    top: 0; /* Sticky navbar */
-    z-index: 1000; /* Ensure it stays on top */
+    top: 0; 
+    z-index: 1000; 
+    overflow-x: hidden; 
 }
 
-/* Title Section */
+
 .home-title {
     width: 100%;
+
     margin-top: 2px;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem; 
     font-weight: bold;
-    color: #003366; /* Deep navy blue */
+    color: #003366; 
     letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
     font-family: "Playfair Display", serif;
-    padding: 3px;
-    background: linear-gradient(to right, #e3f2fd, #ffffff); /* Gradient for visual appeal */
+    padding: 45px;
+    background: linear-gradient(to right, #e3f2fd, #ffffff); 
     border-radius: 8px;
-    border-bottom: 4px solid #00aaff; /* Aqua blue underline */
+    border-bottom: 4px solid #00aaff; 
+    box-sizing: border-box;
 }
 
-/* Inner Layout */
+.home-title p {
+    font-family: "Inter", sans-serif;
+    font-style: italic;
+    margin-top: -10px; 
+    font-size: 1.6rem; 
+    text-decoration: underline; 
+    color: #00509e; 
+    font-weight: 400; 
+    letter-spacing: 1px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+}
+
+
 .inner-container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr; /* Sidebar - Main Content - Sidebar */
+    grid-template-columns: 1fr 3fr 1fr; 
     gap: 20px;
     width: 100%;
     margin-top: 20px;
+    box-sizing: border-box;
+    max-width: 100%; 
+     
 }
 
-/* Ad Sections */
+
 .left-container,
 .right-container {
-    background-color: #f0f0f0; /* Light gray */
+    background-color: #f0f0f0; 
     padding: 15px;
     text-align: center;
     font-size: 0.9rem;
-    color: #555; /* Subtle gray text */
-    border: 1px solid #ddd; /* Softer border */
+    color: #555; 
+    border: 1px solid #ddd; 
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-weight: bold;
     height: fit-content;
     position: sticky;
-    top: 100px; /* Sticky ads */
+    top: 100px; 
 }
 
-/* News Cards Section */
+
 .news-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 20px;
     padding: 20px;
-    background-color: #fff; /* White background for cards */
+    background-color: #fff; 
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     overflow: hidden;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .news-cards ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    max-width: 100%; 
 }
 
-/* Individual News Card */
-.news-card {
-    background: #ffffff; /* White background for cards */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 15px;
-    text-align: left;
-}
+
+
 
 .news-card:hover {
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+    cursor: pointer;
 }
 
-/* News Card Content */
+
 .news-card h2 {
     font-size: 1.2rem;
-    color: #00509e; /* Accent color */
+    color: #00509e; 
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -131,11 +148,11 @@ body {
     margin: 0;
 }
 
-/* Footer */
+
 .footer {
     margin-top: 30px;
     padding: 15px;
-    background-color: #003366; /* Deep navy blue */
+    background-color: #003366; 
     color: #fff;
     text-align: center;
     font-size: 1rem;
@@ -143,22 +160,87 @@ body {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .inner-container {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr; 
+        padding: 10px; 
     }
+   
 
     .left-container,
     .right-container {
-        display: none; /* Hide sidebars on smaller screens */
+        display: none; 
+    }.nav {
+        font-size: 1rem; 
+        padding: 1px 1px; 
+        overflow: hidden;
+        border-radius: 3%;
     }
 
-    .news-card {
-        flex: 1 1 100%;
-    }
-
+    
     .home-title {
-        font-size: 2rem; /* Smaller title on smaller screens */
+        font-size: 1.3rem; 
+        padding: 2px; 
+       
+    }
+    
+
+    .home-title p {
+        font-size: 1.4rem; 
     }
 }
+
+@media (max-width: 576px) {
+    .inner-container {
+        grid-template-columns: 1fr; 
+        padding: 5px; 
+    }
+
+    .nav {
+        font-size: 0.9rem; 
+        padding: 1px 1px; 
+        overflow: hidden;
+    }
+
+   
+    .home-title {
+        font-size: 1.8rem; 
+        padding: 15px; 
+        overflow: hidden;
+    }
+
+    .home-title p {
+        font-size: 1.2rem; 
+    }
+}
+@media (max-width: 360px) {
+    .inner-container {
+        grid-template-columns: 1fr; 
+        padding: 1px; 
+    }
+   
+
+    .left-container,
+    .right-container {
+        display: none; 
+    }.nav {
+        font-size: 1rem; 
+        padding: 1px 1px; 
+        overflow: hidden;
+        border-radius: 3%;
+    }
+
+    
+    .home-title {
+        font-size: 1.3rem; 
+        padding: 2px; 
+       
+    }
+    
+
+    .home-title p {
+        font-size: 1.4rem; 
+    }
+}
+

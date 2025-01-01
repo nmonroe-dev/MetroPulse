@@ -10,11 +10,11 @@ function HomePage() {
     const [news, setNews] = useState([]);
     const [filteredNews, setFilteredNews] = useState([]);
     const [latestNews, setLatestNews] = useState([]);
-    const [activeView, setActiveView] = useState("filtered"); // State to control which view is active
+    const [activeView, setActiveView] = useState("filtered"); 
     const navigate = useNavigate();
 
     const handleCategoryChange = async (onCategoryChange) => {
-        setActiveView("filtered"); // Switch to filtered view
+        setActiveView("filtered"); 
         if (onCategoryChange === "All") {
             setFilteredNews(news);
             return;
@@ -28,7 +28,7 @@ function HomePage() {
     };
 
     const getLatest = async () => {
-        setActiveView("latest"); // Switch to latest news view
+        setActiveView("latest"); 
         try {
             console.log("button clicked");
             const latestArticles = await axios.get("http://localhost:6006/news/latest/");
@@ -62,22 +62,23 @@ function HomePage() {
                 <Navbar onCategoryChange={handleCategoryChange} getLatest={getLatest} />
             </div>
             <div className="home-title">
-                <h1>Great News</h1>
+                <h1>The MetroPulse</h1>
+                <p>Your Source for Real-Time DFW News</p>
             </div>
             <div className="inner-container">
                 <div className="left-container"><AdSection /></div>
                 <div className="news-cards">
                     <ul>
-                        {/* Conditional Rendering Based on Active View */}
+                        
                         {activeView === "latest" &&
                             latestNews.map((article) => {
-                                const pubDate = new Date(article.pubDate); // Convert pubDate here
+                                const pubDate = new Date(article.pubDate); 
                                 return (
                                     <li key={article._id} onClick={() => handleCardClick(article)}>
                                         <NewsCard
                                             title={article.title}
                                             description={article.description}
-                                            pubDate={pubDate.toLocaleDateString()} // Pass formatted date
+                                            pubDate={pubDate.toLocaleDateString()} 
                                             img={article.img}
                                         />
                                     </li>
@@ -85,13 +86,13 @@ function HomePage() {
                             })}
                         {activeView === "filtered" &&
                             filteredNews.map((article) => {
-                                const pubDate = new Date(article.pubDate); // Convert pubDate here
+                                const pubDate = new Date(article.pubDate); 
                                 return (
                                     <li key={article._id} onClick={() => handleCardClick(article)}>
                                         <NewsCard
                                             title={article.title}
                                             description={article.description}
-                                            pubDate={pubDate.toLocaleDateString()} // Pass formatted date
+                                            pubDate={pubDate.toLocaleDateString()} 
                                             img={article.img}
                                         />
                                     </li>
@@ -101,7 +102,7 @@ function HomePage() {
                 </div>
                 <div className="right-container"><AdSection /></div>
             </div>
-            <div className="footer">Footer content</div>
+            
         </div>
     );
 }

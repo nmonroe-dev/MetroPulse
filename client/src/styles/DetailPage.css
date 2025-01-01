@@ -1,50 +1,50 @@
-/* Main Container */
+
 .main-container {
     width: auto;
     
     margin: 0 auto;
     padding: 20px;
-    background-color: #fdf5e6; /* Warm parchment */
-    border: 2px solid #6050f1; /* Vibrant purple */
+    background-color: #fdf5e6; 
+    border: 2px solid #6050f1; 
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    font-family: "Playfair Display", serif; /* Classic serif font */
-    color: #251d4b; /* Dark brown text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    font-family: "Playfair Display", serif; 
+    color: #251d4b; 
 }
 
-/* Title Container */
+
 .title-container {
     text-align: center;
     margin-bottom: 30px;
     padding-bottom: 15px;
-    border-bottom: 3px dashed #25138b; /* Western-styled separator */
+    border-bottom: 3px dashed #25138b; 
 }
 
 .title-container h1 {
     font-size: 3rem;
     font-weight: bold;
-    color: #25138b; /* Deep blue */
-    letter-spacing: 3px; /* Dramatic effect */
+    color: #25138b; 
+    letter-spacing: 3px; 
     text-transform: uppercase;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Enhanced shadow for depth */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); 
     margin: 0;
 }
 
-/* Article Container */
+
 .article-container {
     
     height: auto;
-    background-color: #faf0db; /* Softer parchment */
+    background-color: #faf0db; 
     padding: 20px;
     border-radius: 8px;
-    border: 2px solid #25138b; /* Purple border for consistency */
-    color: #1e1d4b; /* Dark blue text */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow for focus */
-    font-style: normal; /* Keep text readable */
-    gap: 20px; /* Adds spacing between the image and text */
+    border: 2px solid #25138b; 
+    color: #1e1d4b; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); 
+    font-style: normal; 
+    gap: 20px; 
 }
 
-/* Image Styling */
+
 .article-container img {
     flex: 0 0 300px; 
     max-width: 100%; 
@@ -56,13 +56,13 @@
     
 }
 
-/* Text Styling */
+
 .article-container p {
     
     margin: 0;
-    line-height: 1.8; /* Improved readability */
-    font-family: "Inter", sans-serif; /* Clean, modern font */
-    text-align: justify; /* Justify text for a newspaper look */
+    line-height: 1.8; 
+    font-family: "Inter", sans-serif; 
+    text-align: justify; 
 }
 .article-container::after {
     content: "";
@@ -70,14 +70,14 @@
     clear: both;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .main-container {
         padding: 15px;
     }
 
     .title-container h1 {
-        font-size: 2rem;
+        font-size: 1.3rem;
         letter-spacing: 2px;
     }
 
@@ -87,12 +87,12 @@
     }
 
     .article-container img {
-        flex: 0 0 100%; /* Make the image take up full width on smaller screens */
+        flex: 0 0 100%; 
         margin-bottom: 15px;
     }
 
     .article-container p {
         flex: 1;
-        text-align: left; /* Ensure text is readable on smaller screens */
+        text-align: left; 
     }
 }

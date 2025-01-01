@@ -37,7 +37,7 @@ const fetchGoogleNews = async () => {
         const savedArticles = [];
 
         for (const article of articles) {
-            // Check if the article already exists in the database
+            
             const exists = await News.findOne({ link: article.link });
 
             if (!exists) {
@@ -59,7 +59,7 @@ const fetchGoogleNews = async () => {
                     });
 
                     // Extract image URL
-                    const imgTag = $("img").first(); // Adjust selector based on the site
+                    const imgTag = $("img").first(); 
                     const imgSrc = imgTag.attr("src") || null;
 
                     // Save to the database

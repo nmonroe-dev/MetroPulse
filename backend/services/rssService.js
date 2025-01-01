@@ -9,7 +9,7 @@ const fetchNews = async () => {
         const response = await axios.get("https://www.wfaa.com/feeds/syndication/rss/news");
         const xmlData = response.data;
 
-        // Parse the XML data
+        
         const parsedData = await xml2js.parseStringPromise(xmlData, { explicitArray: false });
        
 
@@ -26,16 +26,16 @@ const fetchNews = async () => {
         const savedArticles = [];
 
         for (const article of articles) {
-            // Check if the article already exists
+            
             const exists = await News.findOne({ link: article.link });
 
             if (!exists) {
                 try {
-                    // Fetch the full story page
+                    
                     const storyResponse = await axios.get(article.link);
                     const $ = cheerio.load(storyResponse.data);
 
-                    // Extract the story content
+                    
                     const storySections = $(".article__body .article__section.article__section_type_text");
                     let fullStory = "";
                     storySections.each((index, section) => {
@@ -43,10 +43,10 @@ const fetchNews = async () => {
                         fullStory += `${textContent}\n`;
                     });
 
-                    // Add the full story to the article
+                    
                     article.story = fullStory;
 
-                    // Save the article to the database
+                   
                     const savedArticle = await News.create(article);
                     savedArticles.push(savedArticle);
                 } catch (storyError) {

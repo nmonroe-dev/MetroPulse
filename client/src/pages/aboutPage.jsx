@@ -5,9 +5,9 @@ function AboutPage() {
     return (
         <div className="about-container">
             <Navbar/>
-            <h1>About Great News</h1>
+            <h1>About MetroPulse</h1>
             <p>
-                Welcome to <strong>Great News</strong>, your go-to platform for curated news updates. We bring you the latest headlines from trusted sources using RSS feed technology, ensuring you stay informed with accurate and timely information.
+                Welcome to <strong>MetroPulse </strong>, your go-to platform for curated news updates. We bring you the latest headlines from trusted sources using RSS feed technology, ensuring you stay informed with accurate and timely information.
             </p>
             <h2>Our Mission</h2>
             <p>
@@ -15,7 +15,7 @@ function AboutPage() {
             </p>
             <h2>How We Work</h2>
             <p>
-                <strong>Great News</strong> leverages RSS feeds to fetch articles from reputable publishers. This technology allows us to aggregate and display news stories in real-time, giving you quick access to the latest updates.
+                <strong>MetroPulse</strong> leverages RSS feeds to fetch articles from reputable publishers. This technology allows us to aggregate and display news stories in real-time, giving you quick access to the latest updates.
             </p>
             <h2>Our Trusted Source</h2>
             <p>
@@ -27,7 +27,7 @@ function AboutPage() {
             </p>
             <h2>Contact Us</h2>
             <p>
-                Have feedback or suggestions? We’d love to hear from you! Reach out to us at <a href="mailto:contact@greatnews.com">contact@greatnews.com</a>.
+                Have feedback or suggestions? We’d love to hear from you! Reach out to us at <a href="mailto:contact@greatnews.com">contact@MetroPulse.com</a>.
             </p>
         </div>
     );

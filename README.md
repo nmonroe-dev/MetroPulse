@@ -37,6 +37,8 @@ Ensure you have the following installed on your system:
 ### Steps
 1. Clone the repository:
    ```bash
+   https://github.com/nmonroe-dev/MetroPulse.git
+   ```
    
 2. Navigate to the project directory:
    ```bash

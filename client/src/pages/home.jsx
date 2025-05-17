@@ -18,7 +18,7 @@ function HomePage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowModal(false);
-    }, 55000);
+    }, 5000);
     return () => clearTimeout(timer);
   }, []);
 
